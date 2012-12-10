@@ -40,8 +40,8 @@ a{
     border-color: rgba(0,0,0,1);
   }
 h1,h2,h3,h4{
-  font-family: "brandon-grotesque", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
-  font-weight: 500;
+  font-family: "source-sans-pro", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: bold;
 }
 code{
   font-family: monospace;
@@ -133,10 +133,12 @@ section[role="main"]{
     }
       section[role="main"] article header h2{
         font-size: 2.4em;
-        line-height: 1.6em;
+        line-height: 1.4em;
+        margin-bottom: 6px;
       }
         section[role="main"] article header h2 a{
           border: 0 none;
+          white-space: normal;
         }
           section[role="main"] article header h2 a:hover{
             background: #fff4cc;
@@ -144,8 +146,8 @@ section[role="main"]{
       section[role="main"] article time{
         display: block;
         color: #a4abb2;
-        font-family: "brandon-grotesque", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
-        font-size: .6875em;
+        font-family: "source-sans-pro", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
+        font-size: .75em;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: .2em;
@@ -164,7 +166,7 @@ section[role="main"]{
         font-size: 1.2em;
       }
       section[role="main"] article .content p{
-        margin-top: 20px;
+        margin-bottom: 12px;
       }
       section[role="main"] article .content code{
         font-size: .9em;
@@ -190,7 +192,7 @@ section[role="main"]{
           }
       section[role="main"] article .content .prettyprint{
         display: block;
-        margin-top: 20px;
+        margin-bottom: 20px;
         padding: 12px 18px;
         line-height: 1.3em;
         color: #f5f9ff;
@@ -199,9 +201,9 @@ section[role="main"]{
         -webkit-border-radius: 3px;
            -moz-border-radius: 3px;
                 border-radius: 3px;
-        -webkit-box-shadow: 0 -1px 2px #000 inset;
-           -moz-box-shadow: 0 -1px 2px #000 inset;
-                box-shadow: 0 -1px 2px #000 inset;
+        -webkit-box-shadow: 0 -1px 2px rgba(0,0,0,.8) inset;
+           -moz-box-shadow: 0 -1px 2px rgba(0,0,0,.8) inset;
+                box-shadow: 0 -1px 2px rgba(0,0,0,.8) inset;
       }
 
 /* Footer
@@ -231,6 +233,30 @@ footer[role="footer"]{
   .container{
     width: auto;
     padding: 0 20px;
+  }
+}
+@media screen and (max-width: 480px){
+  body{
+    font-size: 80%;
+  }
+  header[role="banner"]{
+    padding: 20px 0;
+  }
+  #about{
+    padding-top: 20px;
+  }
+  section[role="main"]{
+    padding-bottom: 50px;
+  }
+    section[role="main"] article{
+      margin-top: 40px;
+    }
+      section[role="main"] article .content h2,
+      section[role="main"] article .content h3{
+        margin: 15px 0;
+      }
+  footer[role="footer"]{
+    padding: 30px 0;
   }
 }
 
