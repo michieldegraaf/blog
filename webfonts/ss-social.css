@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+*/
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('ss-social-regular.eot');
+  src: url('ss-social-regular.eot?#iefix') format('embedded-opentype'),
+       url('ss-social-regular.woff') format('woff'),
+       url('ss-social-regular.ttf') format('truetype'),
+       url('ss-social-regular.svg#SSSocialRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon, [class^="ss-"]:before, [class*=" ss-"]:before, 
+.ss-icon.ss-social, [class^="ss-"].ss-social:before, [class*=" ss-"].ss-social:before {
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -moz-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+.ss-facebook:before{content:''}.ss-twitter:before{content:''}.ss-linkedin:before{content:''}.ss-googleplus:before{content:''}.ss-tumblr:before{content:''}.ss-wordpress:before{content:''}.ss-blogger:before{content:''}.ss-posterous:before{content:''}.ss-youtube:before{content:''}.ss-vimeo:before{content:''}.ss-flickr:before{content:''}.ss-instagram:before{content:''}.ss-pinterest:before{content:''}.ss-dribbble:before{content:''}.ss-behance:before{content:''}.ss-github:before{content:''}.ss-paypal:before{content:''}.ss-foursquare:before{content:''}.ss-skype:before{content:''}.ss-mail:before{content:'✉'}
