@@ -1,0 +1,245 @@
+/*
+
+  Handwritten by Michiel de Graaf.
+
+*/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog{
+  display: block;
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+/* All the things
+ *************************************/
+
+body{
+  font-family: "minion-pro", "adobe-garamond-pro", Adobe Garamond Pro, Georgia, Times, serif;
+  font-size: 100%;
+  line-height: 200%;
+  vertical-align: baseline;
+  color: #18191a;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+}
+a{
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  -webkit-transition: all .25s;
+     -moz-transition: all .25s;
+          transition: all .25s;
+}
+  a:hover{
+    border-color: rgba(0,0,0,1);
+  }
+h1,h2,h3,h4{
+  font-family: "brandon-grotesque", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 500;
+}
+code{
+  font-family: monospace;
+}
+.container{
+  overflow: hidden;
+  width: 720px;
+  margin: 0 auto;
+}
+
+/* Header
+ *************************************/
+
+header[role="banner"]{
+  overflow: hidden;
+  padding: 80px 0;
+  background: #d0f4dd;
+}
+  div[role="navigation"] a{
+    display: block;
+    border: 0 none;
+  }
+  .logo{
+    float: left;
+    width: 37px;
+    height: 34px;
+    text-indent: -9999px;
+    background: url(../img/logo-black.png) no-repeat center center;
+  }
+    .logo span{
+      display: block;
+      margin-top: 4px;
+    }
+  div[role="navigation"] nav{
+    float: right;
+    margin-top: 4px;
+  }
+    div[role="navigation"] nav ul{
+      list-style: none;
+      overflow: hidden;
+    }
+      div[role="navigation"] nav li{
+        display: block;
+        float: left;
+        margin-left: 20px;
+      }
+        div[role="navigation"] nav a{
+          opacity: .4;
+          text-shadow: 0 1px rgba(255,255,255,.4);
+        }
+          div[role="navigation"] nav a:hover{
+            opacity: 1;
+          }
+          div[role="navigation"] nav a span{
+            display: none;
+          }
+
+/* About
+ *************************************/
+
+#about{
+  padding-top: 50px;
+}
+  #about h1{
+    font-family: "minion-pro", "adobe-garamond-pro", Adobe Garamond Pro, Georgia, Times, serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    line-height: 1.4em;
+    color: rgba(0,0,0,.7);
+    text-shadow: 0 1px rgba(255,255,255,.4);
+  }
+    #about h1 span{
+      font-style: italic;
+    }
+
+/* Articles
+ *************************************/
+
+section[role="main"]{
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+  section[role="main"] article{
+    margin-top: 80px;
+  }
+    section[role="main"] article header{
+      overflow: hidden;
+    }
+      section[role="main"] article header h2{
+        font-size: 2.4em;
+        line-height: 1.6em;
+      }
+        section[role="main"] article header h2 a{
+          border: 0 none;
+        }
+          section[role="main"] article header h2 a:hover{
+            background: #fff4cc;
+          }
+      section[role="main"] article time{
+        display: block;
+        color: #a4abb2;
+        font-family: "brandon-grotesque", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
+        font-size: .6875em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+      }
+    section[role="main"] article .content{
+      font-size: 1.25em;
+    }
+      section[role="main"] article .content h2,
+      section[role="main"] article .content h3{
+        margin: 40px 0;
+      }
+      section[role="main"] article .content h2{
+        font-size: 1.5em;
+      }
+      section[role="main"] article .content h3{
+        font-size: 1.2em;
+      }
+      section[role="main"] article .content p{
+        margin-top: 20px;
+      }
+      section[role="main"] article .content code{
+        font-size: .9em;
+      }
+        section[role="main"] article .content p code{
+          display: inline-block;
+          padding: 1px 12px;
+          white-space: nowrap;
+          text-shadow: 0 1px rgba(255,255,255,.2);
+          background: #fff4cc;
+          -webkit-border-radius: 2px;
+             -moz-border-radius: 2px;
+                  border-radius: 2px;
+          -webkit-box-shadow: 0 -1px 1px rgba(0,0,0,.1) inset;
+             -moz-box-shadow: 0 -1px 1px rgba(0,0,0,.1) inset;
+                  box-shadow: 0 -1px 1px rgba(0,0,0,.1) inset;
+        }
+        section[role="main"] article .content .intro{
+          margin-top: 0;
+        }
+          section[role="main"] article .content .intro strong{
+            font-weight: normal;
+          }
+      section[role="main"] article .content .prettyprint{
+        display: block;
+        margin-top: 20px;
+        padding: 12px 18px;
+        line-height: 1.3em;
+        color: #f5f9ff;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        background: #30353d;
+        -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+                border-radius: 3px;
+        -webkit-box-shadow: 0 -1px 2px #000 inset;
+           -moz-box-shadow: 0 -1px 2px #000 inset;
+                box-shadow: 0 -1px 2px #000 inset;
+      }
+
+/* Footer
+ *************************************/
+
+footer[role="footer"]{
+  padding: 50px 0;
+  border-top: 1px solid #ddd;
+}
+  footer[role="footer"] p{
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    color: #666;
+  }
+    footer[role="footer"] p a{
+      padding-bottom: 2px;
+    }
+
+/* Responsiveness
+ *************************************/
+
+@media screen and (max-width: 760px){
+  body{
+    font-size: 90%;
+  }
+  .container{
+    width: auto;
+    padding: 0 20px;
+  }
+}
+
+/* Retina
+ *************************************/
+
+@media screen and (-webkit-min-device-pixel-ratio : 1.5),screen and (min-device-pixel-ratio : 1.5){
+  header[role="banner"] .logo{
+    background-image: url(../img/logo-black@2x.png);
+    background-size: 37px 34px;
+  }
+}

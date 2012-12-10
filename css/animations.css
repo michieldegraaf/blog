@@ -1,0 +1,44 @@
+/* Animation triggers */
+
+header[role="banner"]{
+  -webkit-animation: headbg 90s 0 infinite alternate ease-in-out;
+     -moz-animation: headbg 90s 0 infinite alternate ease-in-out;
+          animation: headbg 90s 0 infinite alternate ease-in-out;
+}
+
+/* Animation keyframes */
+
+@-webkit-keyframes headbg{
+  0%{
+    background-color: #d0f4dd;
+  }
+  25%{
+    background-color: #d0f4f4;
+  }
+  50%{
+    background-color: #d0ddf4;
+  }
+  75%{
+    background-color: #daf8dd;
+  }
+  100%{
+    background-color: #d0f4dd;
+  }
+}
+@-moz-keyframes headbg{
+  0%{
+    background-color: #d0f4dd;
+  }
+  25%{
+    background-color: #d0f4f4;
+  }
+  50%{
+    background-color: #d0ddf4;
+  }
+  75%{
+    background-color: #daf8dd;
+  }
+  100%{
+    background-color: #d0f4dd;
+  }
+}
