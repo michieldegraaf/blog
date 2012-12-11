@@ -57,7 +57,7 @@ code{
 
 header[role="banner"]{
   overflow: hidden;
-  padding: 80px 0;
+  padding: 60px 0;
   background: #d0f4dd;
 }
   div[role="navigation"] a{
@@ -68,6 +68,7 @@ header[role="banner"]{
     float: left;
     width: 37px;
     height: 34px;
+    margin-top: 20px;
     text-indent: -9999px;
     background: url(../img/logo-black.png) no-repeat center center;
   }
@@ -86,7 +87,7 @@ header[role="banner"]{
       div[role="navigation"] nav li{
         display: block;
         float: left;
-        margin-left: 20px;
+        margin: 20px 0 0 20px;
       }
         div[role="navigation"] nav a{
           opacity: .4;
@@ -103,7 +104,7 @@ header[role="banner"]{
  *************************************/
 
 #about{
-  padding-top: 50px;
+  margin-top: 50px;
 }
   #about h1{
     font-family: "minion-pro", "adobe-garamond-pro", Adobe Garamond Pro, Georgia, Times, serif;
@@ -240,10 +241,10 @@ footer[role="footer"]{
     font-size: 80%;
   }
   header[role="banner"]{
-    padding: 20px 0;
+    padding: 40px 0;
   }
   #about{
-    padding-top: 20px;
+    margin-top: 15px;
   }
   section[role="main"]{
     padding-bottom: 50px;
