@@ -5,6 +5,32 @@ header[role="banner"]{
      -moz-animation: headbg 90s 0 infinite alternate ease-in-out;
           animation: headbg 90s 0 infinite alternate ease-in-out;
 }
+  .logo,
+  div[role="navigation"] nav li,
+  #about{
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+       -moz-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-animation: fadein .6s .5s 1 forwards ease-in-out;
+       -moz-animation: fadein .6s .5s 1 forwards ease-in-out;
+            animation: fadein .6s .5s 1 forwards ease-in-out;
+  }
+    div[role="navigation"] nav li{
+      -webkit-animation-delay: 1.1s;
+         -moz-animation-delay: 1.1s;
+              animation-delay: 1.1s;
+    }
+      div[role="navigation"] nav li:first-child{
+        -webkit-animation-delay: 1.4s;
+           -moz-animation-delay: 1.4s;
+                animation-delay: 1.4s;
+      }
+    #about{
+      -webkit-animation-delay: .8s;
+         -moz-animation-delay: .8s;
+              animation-delay: .8s;
+    }
 
 /* Animation keyframes */
 
@@ -40,5 +66,25 @@ header[role="banner"]{
   }
   100%{
     background-color: #d0f4dd;
+  }
+}
+@-webkit-keyframes fadein{
+  0%{
+    -webkit-transform: translateY(-20px);
+    opacity: 0;
+  }
+  100%{
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein{
+  0%{
+    -moz-transform: translateY(-20px);
+    opacity: 0;
+  }
+  100%{
+    -moz-transform: translateY(0);
+    opacity: 1;
   }
 }
