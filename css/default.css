@@ -17,7 +17,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  *************************************/
 
 body{
-  font-family: "minion-pro", "adobe-garamond-pro", Adobe Garamond Pro, Georgia, Times, serif;
+  font-family: "minion-pro", Adobe Garamond Pro, Georgia, Times, serif;
   font-size: 100%;
   line-height: 200%;
   vertical-align: baseline;
@@ -28,19 +28,23 @@ body{
 }
 a{
   cursor: pointer;
+  color: #000;
   white-space: nowrap;
   text-decoration: none;
-  color: #000;
-  border-bottom: 1px solid rgba(0,0,0,.3);
   -webkit-transition: all .25s;
      -moz-transition: all .25s;
           transition: all .25s;
 }
-  a:hover{
+p a,
+.about a{
+  border-bottom: 1px solid rgba(0,0,0,.3);
+}
+  p a:hover,
+  .about a:hover{
     border-color: rgba(0,0,0,1);
   }
 h1,h2,h3,h4{
-  font-family: "source-sans-pro", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
+  font-family: "freight-sans-pro", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
   font-weight: bold;
 }
 code{
@@ -57,66 +61,53 @@ code{
 
 header[role="banner"]{
   overflow: hidden;
-  padding: 60px 0;
+  padding: 50px 0 60px 0;
+  text-align: center;
   background: #d0f4dd;
 }
-  div[role="navigation"] a{
-    display: block;
-    border: 0 none;
-  }
   .logo{
-    float: left;
+    display: inline-block;
     width: 37px;
     height: 34px;
     margin-top: 20px;
-    text-indent: -9999px;
+    border: 0 none;
     background: url(../img/logo-black.png) no-repeat center center;
   }
-    .logo span{
-      display: block;
-      margin-top: 4px;
+    .logo img{
+      display: none;
     }
-  div[role="navigation"] nav{
-    float: right;
-    margin-top: 4px;
-  }
-    div[role="navigation"] nav ul{
-      list-style: none;
-      overflow: hidden;
-    }
-      div[role="navigation"] nav li{
-        display: block;
-        float: left;
-        margin: 20px 0 0 20px;
-      }
-        div[role="navigation"] nav a{
-          opacity: .4;
-          text-shadow: 0 1px rgba(255,255,255,.4);
-        }
-          div[role="navigation"] nav a:hover{
-            opacity: 1;
-          }
-          div[role="navigation"] nav a span{
-            display: none;
-          }
-
-/* About
- *************************************/
-
-#about{
-  margin-top: 50px;
-}
-  #about h1{
-    font-family: "minion-pro", "adobe-garamond-pro", Adobe Garamond Pro, Georgia, Times, serif;
+  .about{
+    margin-top: 20px;
+    font-family: "minion-pro", Adobe Garamond Pro, Georgia, Times, serif;
     font-size: 1.3em;
     font-weight: normal;
     line-height: 1.4em;
     color: rgba(0,0,0,.7);
+    text-align: center;
     text-shadow: 0 1px rgba(255,255,255,.4);
   }
-    #about h1 span{
+    .about span{
       font-style: italic;
     }
+  .headlinks{
+    list-style: none;
+    overflow: hidden;
+  }
+    .headlinks li{
+      display: inline-block;
+      margin: 20px 5px 0 5px;
+    }
+      .headlinks a{
+        display: block;
+        opacity: .5;
+        text-shadow: 0 1px rgba(255,255,255,.4);
+      }
+        .headlinks a:hover{
+          opacity: 1;
+        }
+        .headlinks a span{
+          display: none;
+        }
 
 /* Articles
  *************************************/
@@ -131,11 +122,11 @@ section[role="main"]{
   }
     section[role="main"] article header{
       overflow: hidden;
+      margin-bottom: 16px;
     }
       section[role="main"] article header h2{
         font-size: 2.4em;
         line-height: 1.4em;
-        margin-bottom: 6px;
       }
         section[role="main"] article header h2 a{
           border: 0 none;
@@ -146,8 +137,9 @@ section[role="main"]{
           }
       section[role="main"] article time{
         display: block;
+        margin-bottom: 8px;
         color: #a4abb2;
-        font-family: "source-sans-pro", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
+        font-family: "brandon-grotesque", Futura, Lucida Grande, Helvetica Neue, Helvetica, sans-serif;
         font-size: .75em;
         font-weight: bold;
         text-transform: uppercase;
@@ -167,7 +159,7 @@ section[role="main"]{
         font-size: 1.2em;
       }
       section[role="main"] article .content p{
-        margin-bottom: 12px;
+        margin-bottom: 20px;
       }
       section[role="main"] article .content code{
         font-size: .9em;
@@ -207,6 +199,27 @@ section[role="main"]{
                 box-shadow: 0 -1px 2px rgba(0,0,0,.8) inset;
       }
 
+/* Article footer
+ *************************************/
+
+.post-foot{
+  overflow: hidden;
+  height: 22px;
+  margin-top: 50px;
+  padding: 20px 0;
+  text-align: center;
+  line-height: 120%;
+  border-top: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+  .link-back{
+    display: block;
+    float: left;
+  }
+    .link-back:hover{
+      background: #fff4cc;
+    }
+
 /* Footer
  *************************************/
 
@@ -241,9 +254,9 @@ footer[role="footer"]{
     font-size: 80%;
   }
   header[role="banner"]{
-    padding: 40px 0;
+    padding: 10px 0 20px 0;
   }
-  #about{
+  .about{
     margin-top: 15px;
   }
   section[role="main"]{
