@@ -23,24 +23,20 @@
 <body id="{{page}}">
 
   <header role="banner">
-    <div class="container" role="navigation">
-      <a href="/" class="logo">{{author}}</a>
-      <nav>
-        <ul>
-          <li class="twitter">
-            <a href="http://twitter.com/graafdemichiel"><i class="ss-icon">&#xF611; </i><span>twitter</span></a>
-          </li>
-          <li class="dribbble">
-            <a href="http://dribbble.com/michieldegraaf"><i class="ss-icon">&#xF660; </i><span>dribbble</span></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container" id="about">
-      <h1>
+    <div class="container">
+      <a href="/" class="logo"><img src="http://www.michieldegraaf.com/blog/img/logo-black@2x.png" /></a>
+      <h1 class="about">
         My name is {{author}}, I work at <a href="http://www.yourkarma.com">Karma</a>.<br>
-        I'm a web crafter, interface designer and hypertext markup <span>&amp;</span> style sheet linguist.
+        I'm a designer of interfaces, websites and a style sheet <span>&amp;</span> markup linguist.
       </h1>
+      <ul class="headlinks">
+        <li class="twitter">
+          <a href="http://twitter.com/graafdemichiel"><i class="ss-icon">&#xF611; </i><span>twitter</span></a>
+        </li>
+        <li class="dribbble">
+          <a href="http://dribbble.com/michieldegraaf"><i class="ss-icon">&#xF660; </i><span>dribbble</span></a>
+        </li>
+      </ul>
     </div>
   </header>
 
@@ -59,12 +55,11 @@
         {{content}}
       </section>
       {{#is_post}}
-      <ul class="social">
-        <li class="twitter-tweet">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Currently reading: {{title}} by @graafdemichiel">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </li>
-      </ul>
+      <footer class="post-foot">
+        <a class="link-back" href="/">&laquo; Back</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Currently reading: {{title}} by @graafdemichiel">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </section>
       {{/is_post}}
     </article>
     {{/is_archive}}
@@ -114,7 +109,7 @@
 
   <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <script src='js/ss-legacy.min.js'></script>
+  <script src='js/ss-social.js'></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-9622756-4']);
