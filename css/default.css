@@ -161,6 +161,11 @@ section[role="main"]{
       section[role="main"] article .content p{
         margin-bottom: 20px;
       }
+      section[role="main"] article .content img{
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
       section[role="main"] article .content code{
         font-size: .9em;
       }
