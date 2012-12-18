@@ -150,7 +150,7 @@ section[role="main"]{
     }
       section[role="main"] article .content h2,
       section[role="main"] article .content h3{
-        margin: 40px 0;
+        margin: 30px 0;
       }
       section[role="main"] article .content h2{
         font-size: 1.5em;
@@ -213,13 +213,11 @@ section[role="main"]{
 
 .post-foot{
   overflow: hidden;
-  height: 22px;
   margin-top: 50px;
-  padding: 20px 0;
+  padding-top: 20px;
   text-align: center;
   line-height: 120%;
-  border-top: 1px solid rgba(0,0,0,.1);
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-top: 1px solid rgba(0,0,0,.2);
 }
   .link-back{
     display: block;
