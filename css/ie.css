@@ -1,0 +1,11 @@
+/* Fix link borders
+ *************************************/
+
+p a, ul a,
+.about a{
+  border-bottom: 1px solid #aaa;
+}
+  p a:hover, ul a:hover,
+  .about a:hover{
+    border-color: #000;
+  }
