@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{author}}{{#is_post}}{{#posts}} - {{title}}{{/posts}}{{/is_post}}{{#is_page}}{{#posts}} - {{title}}{{/posts}}{{/is_page}} - Designer, CSS &amp; HTML writer</title>
+  <title>{{author}}{{#is_post}}{{#posts}} - {{title}}{{/posts}}{{/is_post}}{{#is_page}}{{#posts}} - {{title}}{{/posts}}{{/is_page}} - Designer and writer of CSS &amp; HTML</title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Michiel de Graaf's blog. Stuff about design, CSS and markup." />
-  <meta name="keywords" content="interface design, web design, HTML, CSS, usability, accessibility, user experience, UI, UX" />
+  <meta name="description" content="Michiel de Graaf's blog about interface design, web crafting, CSS and HTML." />
+  <meta name="keywords" content="interface design, web design, HTML, CSS, usability, UI, UX" />
   <meta name="author" content="Michiel de Graaf" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="robots" content="index, follow">
@@ -17,17 +17,31 @@
   <link href="http://www.michieldegraaf.com/blog/css/animations.css" type="text/css" rel="stylesheet" />
   <link href="http://www.michieldegraaf.com/blog/webfonts/ss-social.css" type="text/css" rel="stylesheet" />
 
+  <!--[if lt IE 9]>
+    <script src="http://www.michieldegraaf.com/blog/js/html5shiv.js"></script>
+    <link href="http://www.michieldegraaf.com/blog/css/ie.css" type="text/css" rel="stylesheet" />
+  <![endif]-->
+
   <script type="text/javascript" src="//use.typekit.net/lvf4mwd.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body id="{{page}}">
 
+  {{#is_post}}{{#posts}}
+  <header role="banner" id="post-head">
+    <div class="container">
+      <a href="/" class="logo"><img src="img/logo-black@2x.png" /></a>
+    </div>
+  </header>
+  {{/posts}}{{/is_post}}
+
+  {{#is_index}}{{#posts}}
   <header role="banner">
     <div class="container">
       <a href="/" class="logo"><img src="http://www.michieldegraaf.com/blog/img/logo-black@2x.png" /></a>
       <h1 class="about">
         My name is {{author}}, I work at <a href="http://www.yourkarma.com">Karma</a>.<br>
-        I design interfaces, websites and am a style sheet <span>&amp;</span> markup linguist.
+        I design interfaces, craft websites and write cascading style sheets <span>&amp;</span> hypertext markup.
       </h1>
       <ul class="headlinks">
         <li class="twitter">
@@ -39,6 +53,7 @@
       </ul>
     </div>
   </header>
+  {{/posts}}{{/is_index}}
 
   <section role="main" class="container">
 
@@ -48,23 +63,38 @@
     <article>
       {{#date}}<time datetime="{{prettydate}}">{{prettydate}}</time>{{/date}}
       <header>
-        <h2><a href="{{permalink}}">{{title}}</a></h2>
+        <h1><a href="{{permalink}}">{{title}}</a></h1>
       </header>
       <section class="content">
         {{#excerpt}}<p class="intro"><strong>{{excerpt}}</strong></span>{{/excerpt}}
         {{content}}
       </section>
       {{#is_post}}
-      <footer class="post-foot">
-        <a class="link-back" href="/">&laquo; Back</a>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Currently reading: {{title}} by @graafdemichiel">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <footer role="contentinfo" class="post-foot">
+        <section class="post-foot-top">
+          <a class="link-back" href="/">&laquo; Back</a>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Currently reading: {{title}} by @graafdemichiel">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </section>
+        <section class="bio">
+          <img src="http://www.michieldegraaf.com/blog/img/michieldegraaf.jpg" />
+          <p>
+            <em>{{author}}</em><br>I'm the lead designer at <a href="">Karma</a>. I design interfaces, craft websites and write cascading style sheets <span>&amp;</span> markup. This is also what I write about.
+          </p>
+          <ul>
+            <li>
+              <a href="http://twitter.com/graafdemichiel"><i class="ss-icon">&#xF611; </i>Twitter</a>
+            </li>
+            <li>
+              <a href="http://dribbble.com/michieldegraaf"><i class="ss-icon">&#xF660; </i>Dribbble</a>
+            </li>
+          </ul>
+        </section>
       </footer>
       {{/is_post}}
     </article>
     {{/is_archive}}
 
-    <!-- archive -->
     {{#is_archive}}
     <article>
       {{#date}}<time datetime="{{prettydate}}">{{prettydate}}</time>{{/date}}
@@ -79,7 +109,6 @@
 
   {{/posts}}
 
-  <!-- 404 -->
   {{^posts}}
     <article>
       <header>
