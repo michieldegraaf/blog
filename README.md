@@ -1,4 +1,4 @@
 Blog
 ====
 
-My personal blog. Running on scriptogr.am.
+My blog. Running on scriptogr.am.
