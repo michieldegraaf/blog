@@ -13,7 +13,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border: 0 none;
 }
 
-/* All the things
+/* Basics
  *************************************/
 
 body{
@@ -24,7 +24,6 @@ body{
   color: #18191a;
   background: #fff;
   -webkit-font-smoothing: antialiased;
-          font-smoothing: antialiased;
 }
 a{
   cursor: pointer;
@@ -35,17 +34,16 @@ a{
      -moz-transition: all .25s;
           transition: all .25s;
 }
-p a, ul a,
-.about a{
-  border-bottom: 1px solid rgba(0,0,0,.3);
+article a{
+  border-bottom: 1px solid rgba(0,0,0,.5);
 }
-  p a:hover, ul a:hover,
-  .about a:hover{
-    border-color: rgba(0,0,0,1);
+  article a:hover{
+    border-color: rgba(0,0,0,0);
+    background: #fff4cc;
   }
 h1,h2,h3,h4{
-  font-family: "brandon-grotesque", Helvetica Neue, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: "brandon-grotesque", Futura, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 500;
 }
 code{
   font-family: Lucida Console, Monaco, Andale Mono, monospace;
@@ -63,7 +61,7 @@ header[role="banner"]{
   overflow: hidden;
   padding: 40px 0 50px 0;
   text-align: center;
-  background: #cceef8;
+  border-bottom: 1px solid #ddd;
 }
   .logo{
     display: inline-block;
@@ -79,14 +77,17 @@ header[role="banner"]{
     }
   .about{
     margin-top: 20px;
-    font-family: "brandon-grotesque", Helvetica Neue, Helvetica, sans-serif;
     font-size: 1.125em;
+    font-family: "minion-pro", Adobe Garamond Pro, Georgia, Times, serif;
     font-weight: normal;
     line-height: 1.4em;
-    color: rgba(0,0,0,.9);
+    color: #000;
     text-align: center;
     text-shadow: 0 1px rgba(255,255,255,.4);
   }
+    .about span{
+      font-style: italic;
+    }
   .headlinks{
     list-style: none;
     overflow: hidden;
@@ -97,9 +98,10 @@ header[role="banner"]{
     }
       .headlinks a{
         display: block;
-        opacity: .5;
+        color: #000;
         text-shadow: 0 1px rgba(255,255,255,.4);
         border: 0 none;
+        opacity: .5;
       }
         .headlinks a:hover{
           opacity: 1;
@@ -107,7 +109,6 @@ header[role="banner"]{
         .headlinks a span{
           display: none;
         }
-
 header[role="banner"]#post-head{
   padding: 10px 0 30px 0;
 }
@@ -133,7 +134,7 @@ section[role="main"]{
     }
       article header h1{
         font-size: 2.4em;
-        line-height: 1.4em;
+        line-height: 1.6em;
       }
         article header h1 a{
           border: 0 none;
@@ -146,9 +147,9 @@ section[role="main"]{
         display: block;
         margin-bottom: 8px;
         color: #a4abb2;
-        font-family: "brandon-grotesque", Helvetica Neue, Helvetica, sans-serif;
+        font-family: "brandon-grotesque", Futura, Helvetica Neue, Helvetica, sans-serif;
         font-size: .75em;
-        font-weight: bold;
+        font-weight: 500;
         text-transform: uppercase;
         letter-spacing: .2em;
       }
@@ -214,12 +215,12 @@ section[role="main"]{
                 box-shadow: 0 -1px 2px rgba(0,0,0,.8) inset;
       }
 
-/* Gist code
+/* Gist
  *************************************/
 
 article .content .gist{
   color: #f5f9ff;
-  font-size: .75em;
+  font-size: .65em;
 }
   article .content .gist .gist-file{
     font-family: Lucida Console, Monaco, Andale Mono, monospace;
@@ -239,7 +240,6 @@ article .content .gist{
     }
       article .content .gist .gist-file .gist-data .line_numbers{
         padding: 20px;
-        font-size: 80%;
         color: #6e7480;
         border: 0 none;
         background: #1b1f24;
@@ -253,6 +253,9 @@ article .content .gist{
       article .content .gist .gist-file .gist-data .line_data{
         padding: 20px !important;
       }
+        article .content .gist .gist-file .gist-data pre{
+          font-family: Lucida Console, Monaco, Andale Mono, monospace;
+        }
         .gist .gist-syntax .k{
           color: #ffa140;
         }
@@ -279,12 +282,15 @@ article .content .gist{
         .gist .gist-syntax .s2{
           color: #ff4184;
         }
+article .content .gist .gist-meta{
+  display: none;
+}
 
 /* Article footer
  *************************************/
 
 .post-foot{
-  margin-top: 80px;
+  margin-top: 40px;
   line-height: 130%;
 }
   .post-foot-top{
@@ -303,18 +309,24 @@ article .content .gist{
       }
   .bio{
     margin-top: 60px;
-    font-size: 1.25em;
     line-height: 140%
   }
+    .bio h5{
+      margin: 0 0 10px 160px;
+      font-size: 1.125em;
+      font-style: italic;
+    }
     .bio p{
       margin-left: 160px;
+      font-size: 1.125em;
     }
       .bio p span{
         font-style: italic
       }
     .bio ul{
-      margin: 10px 0 0 160px;
       overflow: hidden;
+      margin: 10px 0 0 160px;
+      font-size: 1.125em;
     }
       .bio ul li{
         display: block;
@@ -332,6 +344,8 @@ article .content .gist{
       width: 120px;
       height: 120px;
       -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%;
     }
 
 /* Footer
