@@ -412,6 +412,7 @@ footer[role="footer"]{
     .bio{
       margin-top: 30px;
     }
+      .bio h5,
       .bio p{
         margin-left: 80px;
       }
