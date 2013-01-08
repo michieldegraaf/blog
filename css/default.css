@@ -70,7 +70,6 @@ header[role="banner"]{
     margin-top: 20px;
     border: 0 none;
     background: url(http://assets.michieldegraaf.com/blog/img/logo-black.png) no-repeat center center;
-    opacity: .8;
   }
     .logo img{
       display: none;
@@ -309,7 +308,7 @@ article .content .gist .gist-meta{
       }
   .bio{
     margin-top: 60px;
-    line-height: 140%
+    line-height: 165%
   }
     .bio h5{
       margin: 0 0 10px 160px;
