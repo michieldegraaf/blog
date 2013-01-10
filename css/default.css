@@ -255,31 +255,39 @@ article .content .gist{
         article .content .gist .gist-file .gist-data pre{
           font-family: Lucida Console, Monaco, Andale Mono, monospace;
         }
+        .gist .gist-syntax .na,
         .gist .gist-syntax .k{
-          color: #ffa140;
+          color: #fff4d3;
         }
-        .gist .gist-syntax .na{
-          color: #d9d9d9;
+        .gist .gist-syntax .kt,
+        .gist .gist-syntax .m,
+        .gist .gist-syntax .mi,
+        .gist .gist-syntax .no{
+          color: #00ffbe;
+        }
+        .gist .gist-syntax .n,
+        .gist .gist-syntax .s1,
+        .gist .gist-syntax .s2,
+        .gist .gist-syntax .sx{
+          color: #ff4184;
         }
         .gist .gist-syntax .nc,
         .gist .gist-syntax .nt{
-          color: #5ef5f3;
+          color: #84d6ed;
         }
+        .gist .gist-syntax .nd,
         .gist .gist-syntax .nf{
           color: #c0aafc;
-        }
-        .gist .gist-syntax .no{
-          color: #00ffbe;
         }
         .gist .gist-syntax .nv{
           color: #fb8a95;
         }
+        .gist .gist-syntax .nd,
         .gist .gist-syntax .o{
           color: #f5f9ff;
         }
-        .gist .gist-syntax .s1,
-        .gist .gist-syntax .s2{
-          color: #ff4184;
+        .gist .gist-syntax .na, .gist .gist-syntax .k, .gist .gist-syntax .kt, .gist .gist-syntax .m, .gist .gist-syntax .mi, .gist .gist-syntax .no, .gist .gist-syntax .n, .gist .gist-syntax .s1, .gist .gist-syntax .s2, .gist .gist-syntax .sx, .gist .gist-syntax .nc, .gist .gist-syntax .nt, .gist .gist-syntax .nd, .gist .gist-syntax .nf, .gist .gist-syntax .nv, .gist .gist-syntax .nd, .gist .gist-syntax .o{
+          font-weight: normal !important;
         }
 article .content .gist .gist-meta{
   display: none;
