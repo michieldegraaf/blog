@@ -34,10 +34,12 @@ a{
      -moz-transition: all .25s;
           transition: all .25s;
 }
-article a{
+article a,
+.bio a{
   border-bottom: 1px solid rgba(0,0,0,.5);
 }
-  article a:hover{
+  article a:hover,
+  .bio a:hover{
     border-color: rgba(0,0,0,0);
     background: #fff4cc;
   }
@@ -131,15 +133,18 @@ section[role="main"]{
       overflow: hidden;
       margin-bottom: 16px;
     }
-      article header h1{
+      article header h1,
+      article header h2{
         font-size: 2.4em;
         line-height: 1.6em;
       }
-        article header h1 a{
+        article header h1 a,
+        article header h2 a{
           border: 0 none;
           white-space: normal;
         }
-          article header h1 a:hover{
+          article header h1 a:hover,
+          article header h2 a:hover{
             background: #fff4cc;
           }
       article time{
@@ -168,11 +173,20 @@ section[role="main"]{
       article .content p{
         margin-bottom: 20px;
       }
-      article .content img{
-        display: block;
+      article .content figure{
         width: 100%;
-        padding: 10px 0;
+        margin: 30px 0;
       }
+        article .content figure img{
+          display: block;
+          width: 100%;
+          margin-top: 20px;
+        }
+        article .content figure figcaption{
+          display: block;
+          margin-top: 20px;
+          font-style: italic;
+        }
       article .content ul,
       article .content ol{
         margin: 0 0 20px 40px;
@@ -213,21 +227,24 @@ section[role="main"]{
            -moz-box-shadow: 0 -1px 2px rgba(0,0,0,.8) inset;
                 box-shadow: 0 -1px 2px rgba(0,0,0,.8) inset;
       }
+      article .content .read-more{
+        margin-top: 10px;
+      }
 
 /* Gist
  *************************************/
 
 article .content .gist{
   color: #f5f9ff;
-  font-size: .65em;
 }
   article .content .gist .gist-file{
-    font-family: Lucida Console, Monaco, Andale Mono, monospace;
-    border: 0 none;
     margin-bottom: 20px;
+    border: 0 none;
   }
     article .content .gist .gist-file .gist-data{
-      line-height: 1.4em;
+      font-family: Monaco, Andale Mono, monospace;
+      font-size: 13px;
+      line-height: 20px;
       text-shadow: 0 1px 1px rgba(0,0,0,.2);
       background: #30353d;
       -webkit-border-radius: 3px;
@@ -253,7 +270,8 @@ article .content .gist{
         padding: 20px !important;
       }
         article .content .gist .gist-file .gist-data pre{
-          font-family: Lucida Console, Monaco, Andale Mono, monospace;
+          font-family: Monaco, Andale Mono, monospace;
+          font-size: 13px;
         }
         .gist .gist-syntax .na,
         .gist .gist-syntax .k{
@@ -403,12 +421,16 @@ footer[role="footer"]{
     article{
       margin-top: 20px;
     }
-      article header h1{
+      article header h1,
+      article header h2{
         font-size: 1.9em;
       }
       article .content h2,
       article .content h3{
         margin: 15px 0;
+      }
+      article .content .gist .gist-file .gist-data pre{
+        font-size: 70% !important;
       }
   .post-foot{
     margin-top: 30px;
