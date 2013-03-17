@@ -254,7 +254,7 @@ article .content .gist{
          -moz-box-shadow: 0 -1px 2px rgba(0,0,0,.5) inset;
               box-shadow: 0 -1px 2px rgba(0,0,0,.5) inset;
     }
-      article .content .gist .gist-file .gist-data .line_numbers{
+      article .content .gist .gist-file .gist-data .line-numbers{
         padding: 20px;
         color: #6e7480;
         border: 0 none;
@@ -266,7 +266,7 @@ article .content .gist{
            -moz-border-bottom-left-radius: 3px;
                 border-bottom-left-radius: 3px;
       }
-      article .content .gist .gist-file .gist-data .line_data{
+      article .content .gist .gist-file .gist-data .line-data{
         padding: 20px !important;
       }
         article .content .gist .gist-file .gist-data pre{
